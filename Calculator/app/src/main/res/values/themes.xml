@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Calculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="BaseButton">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"        <!-- was 5dp -->
+        android:textSize="18sp"            <!-- was 22sp -->
+        android:textStyle="bold"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"
+        android:minHeight="0dp"            <!-- ADD THIS — removes Android's default min-height -->
+        android:paddingTop="0dp"           <!-- ADD THIS — removes default padding -->
+        android:paddingBottom="0dp"
+    </style>
+
+    <style name="OperatorButton" parent="BaseButton">
+        android:background="@drawable/bg_btn_operator"
+        android:textColor="@color/btn_operator_text"
+        android:textSize="20sp"            <!-- was 26sp -->
+    </style>
+    <style name="NumberButton" parent="BaseButton">
+        android:background="@drawable/bg_btn_number"
+        android:textColor="@color/text_primary"
+    </style>
+
+    <style name="FunctionButton" parent="BaseButton">
+        android:background="@drawable/bg_btn_function"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp"            <!-- was 16sp -->
+    </style>
+
+    <style name="EqualsButton" parent="BaseButton">
+        android:background="@drawable/bg_btn_equals"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"            <!-- was 26sp -->
+    </style>
+
+    <style name="Theme.Calculator" parent="Base.Theme.Calculator" />
+</resources>

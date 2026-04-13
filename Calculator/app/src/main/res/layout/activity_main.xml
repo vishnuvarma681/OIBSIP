@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_dark">
+
+    <!-- ── Display Section ── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="20dp"
+        android:background="@color/bg_display">
+
+        <!-- Expression TextView (e.g., "12 + 5 =") -->
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"
+            android:paddingBottom="4dp"/>
+
+        <!-- Main Result / Input TextView -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"/>
+
+        <!-- Status label (e.g., "Error") -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/text_error"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <!-- ── Button Grid Section ── -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="6dp">
+
+        <!-- ROW 1: AC | +/− | % | ÷ -->
+        <Button android:id="@+id/btnClear"
+            style="@style/FunctionButton"
+            android:text="AC"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnNegate"
+            style="@style/FunctionButton"
+            android:text="+/−"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnPercent"
+            style="@style/FunctionButton"
+            android:text="%"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnDivide"
+            style="@style/OperatorButton"
+            android:text="÷"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- ROW 2: 7 | 8 | 9 | × -->
+        <Button android:id="@+id/btn7"
+            style="@style/NumberButton"
+            android:text="7"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn8"
+            style="@style/NumberButton"
+            android:text="8"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn9"
+            style="@style/NumberButton"
+            android:text="9"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnMultiply"
+            style="@style/OperatorButton"
+            android:text="×"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- ROW 3: 4 | 5 | 6 | − -->
+        <Button android:id="@+id/btn4"
+            style="@style/NumberButton"
+            android:text="4"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn5"
+            style="@style/NumberButton"
+            android:text="5"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn6"
+            style="@style/NumberButton"
+            android:text="6"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnMinus"
+            style="@style/OperatorButton"
+            android:text="−"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- ROW 4: 1 | 2 | 3 | + -->
+        <Button android:id="@+id/btn1"
+            style="@style/NumberButton"
+            android:text="1"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn2"
+            style="@style/NumberButton"
+            android:text="2"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btn3"
+            style="@style/NumberButton"
+            android:text="3"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnPlus"
+            style="@style/OperatorButton"
+            android:text="+"
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <!-- ROW 5: 0 (span 2) | . | = -->
+        <Button android:id="@+id/btn0"
+            style="@style/NumberButton"
+            android:text="0"
+            android:textSize="20sp"
+            android:layout_columnWeight="2"
+            android:layout_rowWeight="1"
+            android:layout_columnSpan="2"
+            android:gravity="center_vertical|start"
+            android:paddingStart="28dp"/>
+
+        <Button android:id="@+id/btnDot"
+            style="@style/NumberButton"
+            android:text="."
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+        <Button android:id="@+id/btnEquals"
+            style="@style/EqualsButton"
+            android:text="="
+            android:textSize="20sp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+
+    </GridLayout>
+
+</LinearLayout>

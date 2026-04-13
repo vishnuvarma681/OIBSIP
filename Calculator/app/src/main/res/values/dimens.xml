@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button sizes -->
+    <dimen name="btn_height">52dp</dimen>        <!-- was ~72dp -->
+    <dimen name="btn_margin">4dp</dimen>
+    <dimen name="btn_corner_radius">10dp</dimen> <!-- was 14dp -->
+
+    <!-- Text sizes -->
+    <dimen name="btn_text_number">18sp</dimen>
+    <dimen name="btn_text_operator">20sp</dimen>
+    <dimen name="btn_text_function">12sp</dimen>
+
+    <!-- Display -->
+    <dimen name="display_text_large">44sp</dimen>
+    <dimen name="display_text_medium">30sp</dimen>
+    <dimen name="display_padding">16dp</dimen>
+
+    <!-- Grid -->
+    <dimen name="grid_padding">6dp</dimen>
+</resources>
